@@ -1,0 +1,263 @@
+* 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: 1000px;
+}
+
+p{ margin: 0;}
+
+ol, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: rgba(162, 162, 162, 0.491);
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.title {
+    font-size: 30px;
+    padding-bottom: 20px;
+    line-height: 40px;
+    color: #16082f;
+    padding: 20px 20px 10px 20px;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: rgba(106, 102, 102, 0.919);
+    padding: 10px 21px;
+    margin-bottom: 45px;
+    line-height: 20px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.card-BusinesClass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid rgba(191, 181, 181, 0.3);
+    height: auto;
+    align-self:start;
+    padding-bottom: 20px;
+}
+
+.card-ProMaster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid rgba(191, 181, 181, 0.3);
+    height: auto;
+    align-self:start;
+    padding-bottom: 20px;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 180px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(#fff, #f2fcfc);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.price {
+    font-size: 45px;
+    margin-bottom: 25px;
+    color: #16082f;
+}
+
+.price-month {
+    font-size: 15px;
+    font-weight: normal;
+    color: rgba(162, 162, 162, 0.491);
+}
+
+.info-title{
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: #16082f;
+}
+
+.info-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(162, 162, 162, 0.491);
+}
+
+.list-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    gap: 3px;
+}
+
+.list-item {
+    list-style: circle;
+    text-align: center;
+    line-height: 45px;
+    padding: 10px;
+    padding-bottom: 20px;
+    
+}
+
+.btn {
+    padding: 15px;
+    border: none;
+    border-radius: 100px;
+    width: 200px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #2500f9;
+    color: #fff;
+}
+
+.btn-14 {
+    background-color: #fff;
+    color: #2500f9;
+}
+
+/* -----------------------------------------------hover */
+
+.card-BusinesClass:hover,
+.card-ProMaster:hover{
+    box-shadow: 0px 35px 30px 10px rgba(93, 132, 151, 0.381);
+    border: 2px solid transparent;
+    transition: box-shadow 0.3s, border 0.2s;
+}
+
+.btn:hover {
+    background: #3320a0;
+    color:#e9e8e8;
+    /* box-shadow: 0px 0px 25px 2px gray; */
+    transition: color 0.3s, background 0.4s;
+}
+
+/* ----------------------------------------------switch */
+.switch {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+ }
+ 
+ .switch input {
+    appearance: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid rgba(128, 128, 128, 0.319);
+    background: #2500f9;
+    outline: none;
+ }
+ 
+ .switch input::before,
+ .switch input::after {
+    z-index: 2;
+    position: absolute;
+    top: 26px;
+    transform: translateY(-50%);
+    font-weight: bolder;
+ }
+ 
+ .switch input::before {
+    content: "Monthly";
+    left: 20px;
+    color: white;
+ }
+ 
+ .switch input::after {
+    content: "Annually";
+    right: 20px;
+    color: gray;
+ }
+ 
+ .switch input:checked {
+    background: #fff;
+ }
+ 
+ .switch label {
+    z-index: 1;
+    position: absolute;
+    top: 7px;
+    bottom: 2px;
+    border-radius: 50px;
+ }
+ 
+ .switch input {
+    transition: 0.25s;
+ }
+ 
+ .switch input:checked::after,
+ .switch input:checked::before {
+    transition: color 0.5s;
+ }
+ 
+ .switch input:checked+label {
+    left: 8px;
+    right: 100px;
+    background: #2500f9;
+    transition: left 0.5s, right 0.4s;
+ }
+ 
+ .switch input:not(:checked) {
+    background: #fff;
+    transition: background 0.4s;
+ }
+ 
+ .switch input:not(:checked)::before {
+    color: gray;
+    transition: color 0.5s;
+ }
+ 
+ .switch input:not(:checked)::after {
+    color: #fff;
+    transition: color 0.5s;
+ }
+ 
+ .switch input:not(:checked) + label {
+    left: 100px;
+    right: 2px;
+    background-color: #2500f9;
+    transition: left 0.4s, right 0.5s, background 0.35s;
+ }
